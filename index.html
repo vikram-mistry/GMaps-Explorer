@@ -1,0 +1,34 @@
+<script type="importmap">
+  {
+    "imports": {
+      "@google/genai": "https://esm.sh/@google/genai@^0.7.0"
+    }
+  }
+</script>
+<div id="root">
+  <div id="presets-container">
+    <span id="take-me-somewhere">Take me somewhere...</span>
+    <form id="prompt-form">
+      <input type="text" id="prompt-input" placeholder="Or ask your own question..." aria-label="Custom location prompt" />
+      <button type="submit" id="submit-button" aria-label="Submit prompt">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="19" x2="12" y2="5"></line>
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+      </button>
+    </form>
+    <div id="presets"></div>
+  </div>
+  <div id="map">
+    <iframe
+      id="embed-map"
+      width="600"
+      height="450"
+      style="border: 0"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+  <div id="caption" class="hidden"></div>
+</div>
